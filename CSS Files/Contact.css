@@ -222,3 +222,144 @@ a:hover .social-logo {
 .contact-form button:active {
   transform: translateY(0);
 }
+
+/* Contact section stands out */
+.contact {
+  max-width: 540px;
+  margin: 2.5rem auto 2rem auto;
+  padding: 2.2rem 2.5rem;
+  background: rgba(60, 50, 37, 0.97);
+  border-left: 8px solid var(--primary-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 32px #3a271f66, inset 0 0 12px #553f28;
+}
+
+.contact h2 {
+  color: var(--heading-color);
+  margin-bottom: 0.5em;
+  letter-spacing: 0.08em;
+  text-shadow: 1px 1px 2px #563e27;
+  text-align: center;
+}
+
+.contact p {
+  color: var(--secondary-color);
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+}
+
+.contact label {
+  color: var(--primary-color);
+  font-size: 1.08rem;
+  margin-bottom: 0.2em;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 0.7em 1em;
+  border: 2px solid var(--primary-color);
+  border-radius: 7px;
+  background: #2e261f;
+  color: var(--text-color);
+  font-family: var(--font-family, inherit);
+  font-size: 1.08rem;
+  margin-bottom: 0.2em;
+  box-shadow: 0 1px 4px #3a271f22;
+  transition: border 0.2s, box-shadow 0.2s;
+  resize: vertical;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: var(--heading-color);
+  outline: none;
+  box-shadow: 0 0 8px #d3996388;
+}
+
+.contact textarea {
+  min-height: 110px;
+  max-height: 300px;
+}
+
+.contact button[type="submit"] {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  font-family: var(--font-family, inherit);
+  font-size: 1.15rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 7px;
+  padding: 0.8em 2em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #3a271f44;
+  letter-spacing: 0.08em;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  margin-top: 0.5em;
+  align-self: flex-end;
+}
+
+.contact button[type="submit"]:hover,
+.contact button[type="submit"]:focus {
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+  color: var(--heading-color);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px #4a6d7c33;
+  outline: none;
+}
+
+/* Social logos inline and centered */
+.links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+}
+
+.links li {
+  display: flex;
+  align-items: center;
+}
+
+.social-logo {
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 6px;
+  background: #fff2;
+  object-fit: contain;
+  transition: filter 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px #3a271f44;
+  display: block;
+}
+
+.links a:hover .social-logo,
+.links a:focus .social-logo {
+  filter: brightness(1.2) drop-shadow(0 0 6px var(--primary-color, #d39963));
+  transform: scale(1.13) rotate(-5deg);
+  box-shadow: 0 2px 12px #d3996388;
+}
+
+@media (max-width: 700px) {
+  .contact {
+    padding: 1.2rem 0.7rem;
+    max-width: 98vw;
+  }
+  .links ul {
+    gap: 1.2rem;
+  }
+  .social-logo {
+    width: 1.7em;
+    height: 1.7em;
+  }
+}
