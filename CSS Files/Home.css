@@ -1,0 +1,174 @@
+/* Storytelling RPG Theme CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+
+:root {
+  --primary-color: #967259; /* Earthy brown */
+  --secondary-color: #4a6d7c; /* Teal jewel tone */
+  --background-color: #1d1b19; /* Dark muted */
+  --text-color: #d9c7b2; /* Soft parchment */
+  --heading-color: #d39963; /* Warm gold */
+  --font-family: 'Uncial Antiqua', cursive;
+  --accent-shadow: 1px 1px 3px #3a271f;
+  --background-texture: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.7;
+  background-image: var(--background-texture);
+  background-repeat: repeat;
+}
+
+header {
+  background: linear-gradient(135deg, #2e261f, #4a4032);
+  color: var(--primary-color);
+  padding: 3rem 1rem;
+  text-align: center;
+  box-shadow: inset 0 -5px 15px #3a2d1e;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+header h1 {
+  margin: 0 0 0.3rem;
+  font-size: 3rem;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-shadow: var(--accent-shadow);
+  text-transform: uppercase;
+}
+
+header p {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 400;
+  color: var(--secondary-color);
+  letter-spacing: 0.1em;
+  text-shadow: var(--accent-shadow);
+  font-style: italic;
+}
+
+nav {
+  background: #3c342a;
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: inset 0 0 10px #3d301d;
+}
+
+nav a {
+  display: inline-block;
+  padding: 1rem 1.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  letter-spacing: 0.12em;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--secondary-color);
+  outline: none;
+  text-shadow:
+    1px 1px 5px var(--secondary-color),
+    0 0 5px var(--primary-color);
+}
+
+main {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem 1.5rem;
+  background: rgba(48, 41, 30, 0.9);
+  border-radius: 12px;
+  box-shadow:
+    0 0 20px #4a4032;
+  border: 1.5px solid #5d4b35;
+}
+
+section {
+  margin-bottom: 3rem;
+  border-left: 8px solid var(--primary-color);
+  padding-left: 1rem;
+  background: rgba(60, 50, 37, 0.85);
+  border-radius: 8px;
+  box-shadow: inset 0 0 5px #553f28;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+  letter-spacing: 0.15em;
+  text-shadow:
+    1px 1px 2px #563e27;
+}
+nav a:active {
+  color: var(--primary-color);
+  text-shadow: none;
+}
+
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+  header p {
+    font-size: 1.1rem;
+  }
+  nav a {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+  main {
+    margin: 2rem 1rem;
+    padding: 1.5rem 1rem;
+  }
+  section h2 {
+    font-size: 1.5rem;
+  }
+    section {
+        padding-left: 0.5rem;
+        border-left-width: 4px;
+    }
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 1rem 0;
+  object-fit: cover; /* Prevent stretching */
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .profile {
+    margin: 1rem auto;
+  }
+}
