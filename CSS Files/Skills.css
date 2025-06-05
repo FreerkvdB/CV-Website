@@ -140,3 +140,89 @@ nav a:active {
     margin: 1rem auto;
   }
 }
+
+.skills-list {
+  list-style: none;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  margin: 2rem 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem 2rem;
+  background: rgba(60, 50, 37, 0.92);
+  border-left: 8px solid var(--primary-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #3a271f55, inset 0 0 8px #553f28;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  color: var(--text-color);
+  font-size: 1.18rem;
+  font-weight: 500;
+  padding: 0.7em 1em;
+  margin: 0;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #2e261f44 0%, #4a403244 100%);
+  box-shadow: 0 1px 4px #3a271f22;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  position: relative;
+}
+
+.skills-list li:not(:last-child) {
+  margin-bottom: 0.3em;
+}
+
+.skills-list li:hover {
+  background: linear-gradient(90deg, #4a6d7c55 0%, #96725955 100%);
+  color: var(--heading-color);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px #4a6d7c33;
+}
+
+.skill-logo {
+  width: 2em;
+  height: 2em;
+  min-width: 2em;
+  min-height: 2em;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  border-radius: 6px;
+  background: #fff2;
+  box-shadow: 0 1px 4px #3a271f44;
+  object-fit: contain;
+  border: 1.5px solid #d3996388;
+  padding: 0.15em;
+  transition: border 0.2s;
+}
+
+.skills-list li:hover .skill-logo {
+  border: 1.5px solid var(--heading-color);
+  background: #fff5;
+}
+
+.skills-list li::before {
+  content: "✦";
+  color: var(--heading-color);
+  font-size: 1.1em;
+  margin-right: 0.5em;
+  text-shadow: 1px 1px 2px #563e27;
+  display: ${/* Only show for items without an image */""} none;
+}
+
+.skills-list li:not(:has(img))::before {
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .skills-list {
+    grid-template-columns: 1fr;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .skills-list li {
+    font-size: 1.05rem;
+    padding: 0.7em 0.7em;
+  }
+}
