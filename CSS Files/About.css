@@ -236,3 +236,90 @@ footer {
   letter-spacing: 0.04em;
   opacity: 0.8;
 }
+
+/* Toggle switch styling */
+.darkmode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 10;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #967259;
+  border-radius: 24px;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #222c36;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.toggle-label {
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-family: inherit;
+  user-select: none;
+}
+
+/* Dark mode overrides */
+body.darkmode {
+  --primary-color: #d39963;
+  --secondary-color: #4a6d7c;
+  --background-color: #181818;
+  --text-color: #e7dac7;
+  --heading-color: #ffd700;
+  background-color: #181818;
+  color: #e7dac7;
+}
+
+body.darkmode main,
+body.darkmode section,
+body.darkmode .education-item,
+body.darkmode .contact,
+body.darkmode .Edu {
+  background: rgba(24, 24, 24, 0.97) !important;
+  box-shadow: 0 0 24px #0008, 0 2px 8px #222a;
+  border-color: #d39963;
+}
+
+body.darkmode header {
+  background: linear-gradient(135deg, #232323, #2c2c2c);
+  color: #d39963;
+  border-bottom: 3px solid #d39963;
+}

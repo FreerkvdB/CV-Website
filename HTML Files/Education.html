@@ -16,6 +16,14 @@
       <h1>Freerk van den Bos</h1>
       <p>Student at Belgium Campus ITversity</p>
     </div>
+     <!-- Dark mode toggle switch -->
+<div class="darkmode-toggle">
+  <label class="switch">
+    <input type="checkbox" id="darkmode-switch" />
+    <span class="slider"></span>
+  </label>
+  <span class="toggle-label">Dark Mode</span>
+</div>
   </header>
   <nav>
     <a href="Home.html" aria-current="page">Home</a>
@@ -50,8 +58,27 @@
     </div>
    </section>
   </main>
+ 
   <footer>
     &copy; 2024 Your Name. All rights reserved.
   </footer>
+  <script>
+  // Dark mode toggle logic
+  const toggle = document.getElementById('darkmode-switch');
+  const body = document.body;
+  if (localStorage.getItem('darkmode') === 'enabled') {
+    body.classList.add('darkmode');
+    toggle.checked = true;
+  }
+  toggle.addEventListener('change', function () {
+    if (this.checked) {
+      body.classList.add('darkmode');
+      localStorage.setItem('darkmode', 'enabled');
+    } else {
+      body.classList.remove('darkmode');
+      localStorage.setItem('darkmode', 'disabled');
+    }
+  });
+</script>
 </body>
 </html>
