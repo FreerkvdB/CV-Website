@@ -25,7 +25,7 @@ I'm Freerk van den Bos, a second-year Software Engineering student, with a passi
 ## 📸 Screenshots
 
 Screenshot of home page:
-<img src="screenshots/homepage.png" alt="Homepage Screenshot" width="500"/>
+<img src="homepage.png" alt="Homepage Screenshot" width="500"/>
 
 
 
