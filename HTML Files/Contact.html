@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio - Contact</title>
   <link rel="stylesheet" href="/CSS Files/Contact.css">
+  
  
 </head>
+
 <body>
  <header>
     <div class="profile-header">
@@ -36,18 +38,13 @@
    <section class="contact">
     <h2>Contact Me</h2>
     <p>If you would like to get in touch, please fill out the form below:</p>
-    <form action="https://example.com/submit" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-      
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-      
-      <button type="submit">Send Message</button>
-    </form>
+    <form id="contact-form">
+  <input type="text" name="name" required />
+  <input type="email" name="email" required />
+  <textarea name="message" required></textarea>
+  <button type="submit">Send</button>
+</form>
+
    </section>
 
    <section class="links">
@@ -69,7 +66,7 @@
         </a>
       </li>
       <li>
-        <a href="https://github.com/FreerkvdBos" target="_blank" rel="noopener">
+        <a href="https://github.com/FreerkvdB" target="_blank" rel="noopener">
           <img src="/Images/Logos/github.svg" alt="GitHub" class="social-logo" />
         </a>
       </li>
@@ -99,5 +96,9 @@
     }
   });
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="/JavaScript/Email.js" defer></script>
+
 </body>
 </html>
