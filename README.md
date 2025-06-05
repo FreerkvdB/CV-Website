@@ -19,13 +19,13 @@ I'm Freerk van den Bos, a second-year Software Engineering student, with a passi
 
 - **Responsive Design** – Mobile-first, adaptable layout
 - **Project Showcase** – Highlight of personal and academic projects
-- **Contact Section** – Easy way to reach out via email or social platforms
+- **Contact Section** – An easy way to reach out via email or social platforms
 - **Dark Mode** – To switch from a light to a darker mode
 
 ## 📸 Screenshots
 
 Screenshot of home page:
-<img src="homepage.png" alt="Homepage Screenshot" width="500"/>
+<img src="Homepage.png" alt="Homepage Screenshot" width="500"/>
 
 
 
