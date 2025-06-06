@@ -25,6 +25,10 @@
   <span class="toggle-label">Dark Mode</span>
 </div>
   </header>
+  
+  <button class="nav-toggle" aria-label="Open navigation">
+    <span class="hamburger"></span>
+  </button>
   <nav>
     <a href="index.html" aria-current="page">Home</a>
     <a href="About.html" aria-current="page">About Me</a>
@@ -85,6 +89,25 @@ I’m currently exploring various areas of the tech field and eager to learn, gr
       localStorage.setItem('darkmode', 'disabled');
     }
   });
+  </script>
+  <script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('nav');
+  navToggle.addEventListener('click', function () {
+    nav.classList.toggle('open');
+    navToggle.classList.toggle('open');
+    document.body.classList.toggle('nav-open');
+  });
+  // Optional: close nav when a link is clicked
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      navToggle.classList.remove('open');
+      document.body.classList.remove('nav-open');
+    });
+  });
 </script>
+
+
 </body>
 </html>
