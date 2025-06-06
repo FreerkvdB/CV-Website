@@ -6,10 +6,11 @@
   --background-color: #1d1b19; /* Dark muted */
   --text-color: #d9c7b2; /* Soft parchment */
   --heading-color: #d39963; /* Warm gold */
-  --font-family: 'Uncial Antiqua', cursive;
+  --font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
   --accent-shadow: 1px 1px 3px #3a271f;
   --background-texture: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
 }
+
 
 * {
   box-sizing: border-box;
