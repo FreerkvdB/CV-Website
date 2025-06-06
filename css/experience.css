@@ -1,3 +1,5 @@
+/* Storytelling RPG Theme CSS */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
 
@@ -22,7 +24,6 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.7;
-  font-size: 1.08rem; /* Match font size to other tabs */
   background-image: var(--background-texture);
   background-repeat: repeat;
 }

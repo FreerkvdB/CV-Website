@@ -1,4 +1,7 @@
+/* Storytelling RPG Theme CSS */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
 
 :root {
   --primary-color: #967259; /* Earthy brown */
@@ -11,7 +14,6 @@
   --background-texture: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
 }
 
-
 * {
   box-sizing: border-box;
 }
@@ -22,7 +24,6 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.7;
-  font-size: 1.08rem; /* Match font size to other tabs */
   background-image: var(--background-texture);
   background-repeat: repeat;
 }
@@ -33,12 +34,6 @@ h1, h2, h3, .profile-header h1, section h2, section h3 {
   font-weight: 700;
   letter-spacing: 0.04em;
   color: var(--heading-color);
-}
-
-/* Headings keep the fantasy style */
-h1, h2, h3, .profile-header h1, section h2, section h3 {
-  font-family: 'Uncial Antiqua', 'Segoe UI', 'Arial', sans-serif;
-  letter-spacing: 0.07em;
 }
 
 header {
