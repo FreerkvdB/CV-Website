@@ -361,6 +361,7 @@ section ul li::before {
     position: absolute;
   }
 
+  /* Show hamburger and hide nav on small screens */
   nav {
     position: fixed;
     top: 0;
