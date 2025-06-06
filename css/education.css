@@ -350,7 +350,96 @@ section ul li::before {
   }
 }
 
+/* Hamburger button styles */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 2001;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
 
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  background: var(--primary-color);
+  height: 4px;
+  width: 28px;
+  border-radius: 2px;
+  position: absolute;
+  left: 6px;
+  transition: 0.3s;
+  content: '';
+}
+
+.hamburger {
+  top: 18px;
+}
+
+.hamburger::before {
+  content: '';
+  top: -10px;
+  position: absolute;
+}
+
+.hamburger::after {
+  content: '';
+  top: 10px;
+  position: absolute;
+}
+
+/* Show hamburger and hide nav on small screens */
+@media (max-width: 700px) {
+  .nav-toggle {
+    display: block;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 70vw;
+    max-width: 320px;
+    height: 100vh;
+    background: #3c342a;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 4.5rem;
+    transition: left 0.3s;
+    box-shadow: 2px 0 16px #0007;
+    z-index: 2000;
+  }
+  nav.open {
+    left: 0;
+  }
+  nav a {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    border-bottom: 1px solid #4a4032;
+    font-size: 1.1rem;
+    text-align: left;
+  }
+  body.nav-open {
+    overflow: hidden;
+  }
+}
+
+/* Hamburger animation when open */
+.nav-toggle.open .hamburger {
+  background: transparent;
+}
+.nav-toggle.open .hamburger::before {
+  transform: translateY(10px) rotate(45deg);
+}
+.nav-toggle.open .hamburger::after {
+  transform: translateY(-10px) rotate(-45deg);
+}
 
 /* Toggle switch styling */
 .darkmode-toggle {
