@@ -17,12 +17,18 @@
 
 body {
   margin: 0;
-  font-family: var(--font-family);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.7;
   background-image: var(--background-texture);
   background-repeat: repeat;
+}
+
+/* Headings keep the fantasy style */
+h1, h2, h3, .profile-header h1, section h2, section h3 {
+  font-family: 'Uncial Antiqua', 'Segoe UI', 'Arial', sans-serif;
+  letter-spacing: 0.07em;
 }
 
 header {
