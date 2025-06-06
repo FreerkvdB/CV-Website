@@ -1,4 +1,7 @@
+/* Storytelling RPG Theme CSS */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
 
 :root {
   --primary-color: #967259; /* Earthy brown */
@@ -96,7 +99,49 @@ nav a:active {
   text-shadow: none;
 }
 
+/* Responsive layout improvements */
+@media (max-width: 900px) {
+  main {
+    margin: 2rem 1rem;
+    padding: 1.5rem 1rem;
+  }
+  .profile-header {
+    gap: 1.2rem;
+  }
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    padding: 1.2rem 0.7rem;
+    gap: 1rem 1.2rem;
+  }
+}
 
+@media (max-width: 700px) {
+  header {
+    padding: 2rem 0.5rem;
+  }
+  .profile-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .profile {
+    width: 110px;
+    height: 110px;
+  }
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  nav a {
+    padding: 0.7rem 0.5rem;
+    font-size: 1rem;
+    border-bottom: 1px solid #4a4032;
+  }
+  .skills-list {
+    grid-template-columns: 1fr;
+    padding: 1rem 0.3rem;
+  }
+}
 /* Hamburger button styles */
 .nav-toggle {
   display: none;
