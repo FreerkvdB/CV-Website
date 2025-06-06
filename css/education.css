@@ -318,55 +318,55 @@ section ul li::before {
   }
 }
 
-  /* Hamburger button styles */
+/* Hamburger button styles */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 2001;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  background: var(--primary-color);
+  height: 4px;
+  width: 28px;
+  border-radius: 2px;
+  position: absolute;
+  left: 6px;
+  transition: 0.3s;
+  content: '';
+}
+
+.hamburger {
+  top: 18px;
+}
+
+.hamburger::before {
+  content: '';
+  top: -10px;
+  position: absolute;
+}
+
+.hamburger::after {
+  content: '';
+  top: 10px;
+  position: absolute;
+}
+
+/* Show hamburger and hide nav on small screens */
+@media (max-width: 700px) {
   .nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    position: absolute;
-    top: 1.5rem;
-    left: 1.5rem;
-    z-index: 2001;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-  }
-
-  .hamburger,
-  .hamburger::before,
-  .hamburger::after {
     display: block;
-    background: var(--primary-color);
-    height: 4px;
-    width: 28px;
-    border-radius: 2px;
-    position: absolute;
-    left: 6px;
-    transition: 0.3s;
-    content: '';
   }
-
-  .hamburger {
-    top: 18px;
-  }
-
-  .hamburger::before {
-    content: '';
-    top: -10px;
-    position: absolute;
-  }
-
-  .hamburger::after {
-    content: '';
-    top: 10px;
-    position: absolute;
-  }
-
-  /* Show hamburger and hide nav on small screens */
-  @media (max-width: 700px) {
-    .nav-toggle {
-      display: block;
-    }
   nav {
     position: fixed;
     top: 0;
