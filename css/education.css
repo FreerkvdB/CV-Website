@@ -320,7 +320,7 @@ section ul li::before {
 
   /* Hamburger button styles */
   .nav-toggle {
-    display: block;
+    display: none;
     background: none;
     border: none;
     position: absolute;
