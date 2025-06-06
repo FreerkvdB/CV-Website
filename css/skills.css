@@ -98,7 +98,16 @@ nav a:active {
   color: var(--primary-color);
   text-shadow: none;
 }
-
+main {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem 1.5rem;
+  background: rgba(48, 41, 30, 0.9);
+  border-radius: 12px;
+  box-shadow:
+    0 0 20px #4a4032;
+  border: 1.5px solid #5d4b35;
+}
 /* Responsive layout improvements */
 @media (max-width: 900px) {
   main {
@@ -233,29 +242,28 @@ nav a:active {
   transform: translateY(-10px) rotate(-45deg);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   header h1 {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
   }
   header p {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
-  nav a {
-    padding: 0.8rem 1.2rem;
-    font-size: 1rem;
+  .profile {
+    width: 80px;
+    height: 80px;
   }
-  main {
-    margin: 2rem 1rem;
-    padding: 1.5rem 1rem;
+  .skills-list li {
+    font-size: 0.98rem;
+    padding: 0.5em 0.5em;
   }
-  section h2 {
-    font-size: 1.5rem;
+  .darkmode-toggle {
+    top: 0.5rem;
+    right: 0.5rem;
+    zoom: 0.85;
   }
-    section {
-        padding-left: 0.5rem;
-        border-left-width: 4px;
-    }
 }
+
 .profile-header {
   display: flex;
   align-items: center;
