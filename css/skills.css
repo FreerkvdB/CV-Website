@@ -32,7 +32,7 @@ h1, h2, h3, .profile-header h1, section h2, section h3 {
 }
 
 header {
-  background: linear-gradient(135deg, #2e261f, #4a4032);
+  background: linear-gradient(135deg, #504c49, #4a4032);
   color: var(--primary-color);
   padding: 3rem 1rem;
   text-align: center;

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
 
 :root {
@@ -6,7 +7,7 @@
   --background-color: #1d1b19; /* Dark muted */
   --text-color: #d9c7b2; /* Soft parchment */
   --heading-color: #d39963; /* Warm gold */
-  --font-family: 'Uncial Antiqua', cursive;
+  --font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
   --accent-shadow: 1px 1px 3px #3a271f;
   --background-texture: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
 }
@@ -17,7 +18,7 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-family: var(--font-family);
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.7;
@@ -25,10 +26,12 @@ body {
   background-repeat: repeat;
 }
 
-/* Headings keep the fantasy style */
+/* Headings: bold, easy to read, but still themed */
 h1, h2, h3, .profile-header h1, section h2, section h3 {
-  font-family: 'Uncial Antiqua', 'Segoe UI', 'Arial', sans-serif;
-  letter-spacing: 0.07em;
+  font-family: var(--font-family);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--heading-color);
 }
 
 header {
